@@ -1,10 +1,32 @@
 import { DiPython, DiDjango, DiPhp, DiJavascript1 } from 'react-icons/di'
 import { SiPowerbi, SiPandas, SiNumpy, SiAngular, SiTypescript, SiWoocommerce, SiGmail, SiMicrosoftexcel } from 'react-icons/si'
 import { FaWhatsapp, FaLinkedin, FaDatabase, FaGithub } from 'react-icons/fa'
+import { useRef, useState } from 'react'
+import emailjs from '@emailjs/browser'
 
 const iconStyle = { fontSize: '2.2rem', marginBottom: '.75rem', display: 'block' }
 
 function App() {
+  const formRef = useRef()
+  const [status, setStatus] = useState('idle') // idle | sending | success | error
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    setStatus('sending')
+    emailjs.sendForm(
+      'service_l89x7qv',
+      'template_4ccmh49',
+      formRef.current,
+      'AvPqBuxwMU8pYBDvb'
+    ).then(() => {
+      setStatus('success')
+      formRef.current.reset()
+      setTimeout(() => setStatus('idle'), 4000)
+    }).catch(() => {
+      setStatus('error')
+      setTimeout(() => setStatus('idle'), 4000)
+    })
+  }
   return (
     <>
       {/* NAV */}
@@ -257,6 +279,23 @@ function App() {
             </div>
           </div>
 
+          <div className="proj-card">
+            <div className="proj-thumb p1"><DiJavascript1 style={{fontSize:'3.5rem',color:'#F7DF1E'}}/></div>
+            <div className="proj-body">
+              <h3>SunnyGo</h3>
+              <p>Plataforma e-commerce de venta de componentes de computadores, desarrollada con Django y JavaScript con tests implementados con Pytest.</p>
+              <div className="proj-tools">
+                <span className="tag amber"><DiPython style={{verticalAlign:'middle'}}/>Python</span>
+                <span className="tag amber"><DiDjango style={{verticalAlign:'middle'}}/>Django</span>
+                <span className="tag amber"><DiJavascript1 style={{verticalAlign:'middle'}}/>JavaScript</span>
+                <span className="tag amber">Pytest</span>
+              </div>
+              <div className="proj-links">
+                <a href="https://github.com/BigDarkness3232/SunnyGo" target="_blank" rel="noreferrer" className="proj-link"><FaGithub style={{verticalAlign:'middle',marginRight:4}}/>GitHub</a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
@@ -268,7 +307,7 @@ function App() {
           <div className="divider"></div>
           <div className="projects-grid">
 
-            <div className="proj-card">
+            {/* <div className="proj-card">
               <div className="proj-thumb p1"><SiPowerbi style={{fontSize:'3.5rem',color:'#F2C811'}}/></div>
               <div className="proj-body">
                 <h3>Dashboard de Ventas — Power BI</h3>
@@ -299,7 +338,7 @@ function App() {
                   <a href="#" className="proj-link">🔗 Ver dashboard</a>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             <div className="proj-card">
               <div className="proj-thumb p3"><DiPython style={{fontSize:'3.5rem',color:'#3776AB'}}/></div>
@@ -313,7 +352,8 @@ function App() {
                   <span className="tag">Google Colab</span>
                 </div>
                 <div className="proj-links">
-                  <a href="https://colab.research.google.com/drive/1Bmd8ysyQNBotIsibvOZU6HtdOLCxJWt2?usp=sharing" target="_blank" rel="noreferrer" className="proj-link">🔗 Ver notebook</a>
+                  <a href="https://github.com/BigDarkness3232/Mineria-de-datos" target="_blank" rel="noreferrer" className="proj-link"><FaGithub style={{verticalAlign:'middle',marginRight:4}}/>GitHub</a>
+                  <a href="https://colab.research.google.com/drive/1Bmd8ysyQNBotIsibvOZU6HtdOLCxJWt2?usp=sharing" target="_blank" rel="noreferrer" className="proj-link"><DiPython style={{verticalAlign:'middle',marginRight:4}}/>Ver notebook</a>
                 </div>
               </div>
             </div>
@@ -347,19 +387,26 @@ function App() {
               </div>
             </div>
             <div className="contact-form">
-              <div className="form-group">
-                <label>Nombre</label>
-                <input type="text" placeholder="Tu nombre" />
-              </div>
-              <div className="form-group">
-                <label>Email</label>
-                <input type="email" placeholder="tu@email.com" />
-              </div>
-              <div className="form-group">
-                <label>Mensaje</label>
-                <textarea placeholder="Cuéntame sobre tu proyecto..."></textarea>
-              </div>
-              <button className="btn-send">Enviar mensaje ✉️</button>
+              <form ref={formRef} onSubmit={handleSubmit}>
+                <div className="form-group">
+                  <label>Nombre</label>
+                  <input type="text" name="name" placeholder="Tu nombre" required />
+                </div>
+                <div className="form-group">
+                  <label>Email</label>
+                  <input type="email" name="from_email" placeholder="tu@email.com" required />
+                </div>
+                <div className="form-group">
+                  <label>Mensaje</label>
+                  <textarea name="message" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+                </div>
+                <button className="btn-send" type="submit" disabled={status === 'sending'}>
+                  {status === 'idle' && 'Enviar mensaje '}
+                  {status === 'sending' && 'Enviando...'}
+                  {status === 'success' && '✅ Mensaje enviado'}
+                  {status === 'error' && '❌ Error al enviar'}
+                </button>
+              </form>
             </div>
           </div>
         </div>
