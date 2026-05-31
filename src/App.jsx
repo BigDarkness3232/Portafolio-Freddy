@@ -1,6 +1,6 @@
-import { DiPython, DiDjango, DiPhp, DiJavascript1 } from 'react-icons/di'
-import { SiPowerbi, SiPandas, SiNumpy, SiAngular, SiTypescript, SiWoocommerce, SiGmail, SiMicrosoftexcel } from 'react-icons/si'
-import { FaWhatsapp, FaLinkedin, FaDatabase, FaGithub } from 'react-icons/fa'
+import { DiPython, DiDjango, DiPhp, DiJavascript1, DiPostgresql } from 'react-icons/di'
+import { SiPowerbi, SiAngular, SiTypescript, SiWoocommerce, SiGmail, SiMicrosoftexcel, SiNextdotjs, SiPrisma } from 'react-icons/si'
+import { FaWhatsapp, FaLinkedin, FaDatabase, FaGithub, FaReact } from 'react-icons/fa'
 import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 
@@ -37,6 +37,7 @@ function App() {
           <a href="#experiencia">Experiencia</a>
           <a href="#habilidades">Habilidades</a>
           <a href="#proyectos">Proyectos</a>
+          <a href="#servicios">Servicios</a>
           <a href="#analisis">Análisis</a>
           <a href="#contacto">Contacto</a>
         </div>
@@ -296,13 +297,87 @@ function App() {
             </div>
           </div>
 
+          <div className="proj-card">
+            <div className="proj-thumb p2"><SiWoocommerce style={{fontSize:'3.5rem',color:'#96588a'}}/></div>
+            <div className="proj-body">
+              <h3>Gourmet Store</h3>
+              <p>E-commerce de productos gourmet hosteado en Vercel. Incluye catálogo de productos, carrito de compras y diseño responsive.</p>
+              <div className="proj-tools">
+                <span className="tag amber"><DiJavascript1 style={{verticalAlign:'middle'}}/>JavaScript</span>
+                <span className="tag amber">E-commerce</span>
+                <span className="tag teal">Vercel</span>
+              </div>
+              <div className="proj-links">
+                <a href="https://gourmet-store-18zb.vercel.app/" target="_blank" rel="noreferrer" className="proj-link">🌐 Ver sitio</a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
+
+      {/* SERVICIOS */}
+      <div className="bg-alt" id="servicios">
+        <div className="inner">
+          <div className="section-tag">05 · Servicios</div>
+          <div className="section-title">Servicios que <span>ofrezco</span></div>
+          <div className="divider"></div>
+          <div className="skills-grid">
+
+            <div className="skill-card">
+              <span style={{...iconStyle}}>🚀</span>
+              <h3>Landing Pages</h3>
+              <p style={{color:'var(--muted)',fontSize:'.88rem',marginBottom:'1rem'}}>Diseño y desarrollo de páginas de aterrizaje modernas, rápidas y orientadas a conversión. Perfectas para promocionar productos, servicios o eventos. Incluye diseño responsive, animaciones y formulario de contacto.</p>
+              <div className="skill-tags">
+                <span className="tag"><SiNextdotjs style={{verticalAlign:'middle',marginRight:4}}/>Next.js</span>
+                <span className="tag"><FaReact style={{verticalAlign:'middle',marginRight:4,color:'#61DAFB'}}/>React</span>
+                <span className="tag amber"><DiJavascript1 style={{verticalAlign:'middle'}}/>JavaScript</span>
+                <span className="tag">HTML/CSS</span>
+              </div>
+              <a href="https://wa.me/56999254350?text=Hola%20Freddy,%20me%20interesa%20cotizar%20una%20Landing%20Page" target="_blank" rel="noreferrer" style={{display:'flex',alignItems:'center',gap:'.4rem',marginTop:'1rem',background:'#25D366',color:'#fff',padding:'.5rem 1rem',borderRadius:'8px',fontSize:'.85rem',fontWeight:600,width:'fit-content'}}>
+                <FaWhatsapp style={{fontSize:'1.1rem'}}/> Cotiza aquí
+              </a>
+            </div>
+
+            <div className="skill-card">
+              <span style={{...iconStyle}}>🛒</span>
+              <h3>E-Commerce</h3>
+              <p style={{color:'var(--muted)',fontSize:'.88rem',marginBottom:'1rem'}}>Desarrollo de tiendas online completas con gestión de productos, carrito de compras, integración de pagos y panel administrativo. Construidas con Next.js, React y base de datos PostgreSQL en Neon con Prisma ORM.</p>
+              <div className="skill-tags">
+                <span className="tag"><SiNextdotjs style={{verticalAlign:'middle',marginRight:4}}/>Next.js</span>
+                <span className="tag"><FaReact style={{verticalAlign:'middle',marginRight:4,color:'#61DAFB'}}/>React</span>
+                <span className="tag teal"><SiPrisma style={{verticalAlign:'middle',marginRight:4}}/>Prisma</span>
+                <span className="tag teal"><DiPostgresql style={{verticalAlign:'middle',marginRight:4}}/>PostgreSQL</span>
+                <span className="tag green">Neon DB</span>
+              </div>
+              <a href="https://wa.me/56999254350?text=Hola%20Freddy,%20me%20interesa%20cotizar%20una%20tienda%20E-Commerce" target="_blank" rel="noreferrer" style={{display:'flex',alignItems:'center',gap:'.4rem',marginTop:'1rem',background:'#25D366',color:'#fff',padding:'.5rem 1rem',borderRadius:'8px',fontSize:'.85rem',fontWeight:600,width:'fit-content'}}>
+                <FaWhatsapp style={{fontSize:'1.1rem'}}/> Cotiza aquí
+              </a>
+            </div>
+
+            <div className="skill-card">
+              <span style={{...iconStyle}}>💻</span>
+              <h3>Aplicaciones Web</h3>
+              <p style={{color:'var(--muted)',fontSize:'.88rem',marginBottom:'1rem'}}>Desarrollo de aplicaciones web a medida con autenticación de usuarios, gestión de datos, paneles administrativos y APIs REST. Desde sistemas internos hasta plataformas completas.</p>
+              <div className="skill-tags">
+                <span className="tag">React</span>
+                <span className="tag">Django</span>
+                <span className="tag teal">APIs REST</span>
+                <span className="tag green"><SiAngular style={{verticalAlign:'middle',marginRight:4}}/>Angular</span>
+              </div>
+              <a href="https://wa.me/56999254350?text=Hola%20Freddy,%20me%20interesa%20cotizar%20una%20Aplicaci%C3%B3n%20Web" target="_blank" rel="noreferrer" style={{display:'flex',alignItems:'center',gap:'.4rem',marginTop:'1rem',background:'#25D366',color:'#fff',padding:'.5rem 1rem',borderRadius:'8px',fontSize:'.85rem',fontWeight:600,width:'fit-content'}}>
+                <FaWhatsapp style={{fontSize:'1.1rem'}}/> Cotiza aquí
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
 
       {/* ANÁLISIS DE DATOS */}
       <div className="bg-alt" id="analisis">
         <div className="inner">
-          <div className="section-tag">05 · Análisis de Datos</div>
+          <div className="section-tag">06 · Análisis de Datos</div>
           <div className="section-title">Casos de <span>Analista de Datos</span></div>
           <div className="divider"></div>
           <div className="projects-grid">
@@ -365,7 +440,7 @@ function App() {
       {/* CONTACTO */}
       <div className="bg-alt" id="contacto">
         <div className="inner">
-          <div className="section-tag">06 · Contacto</div>
+          <div className="section-tag">07 · Contacto</div>
           <div className="section-title">Trabajemos <span>juntos</span></div>
           <div className="divider"></div>
           <div className="contact-grid">
@@ -401,7 +476,7 @@ function App() {
                   <textarea name="message" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
                 </div>
                 <button className="btn-send" type="submit" disabled={status === 'sending'}>
-                  {status === 'idle' && 'Enviar mensaje '}
+                  {status === 'idle' && 'Enviar mensaje ✉️'}
                   {status === 'sending' && 'Enviando...'}
                   {status === 'success' && '✅ Mensaje enviado'}
                   {status === 'error' && '❌ Error al enviar'}
