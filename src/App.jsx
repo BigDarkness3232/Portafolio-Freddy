@@ -46,7 +46,7 @@ function App() {
       {/* HERO */}
       <div className="hero">
         <div>
-          <div className="hero-badge">📊 Ingeniero en Informática · Analista de Datos</div>
+          <div className="hero-badge">📊 Ingeniero en Informática · Soporte TI</div>
           <h1>Hola, soy <span>Freddy Cárdenas</span></h1>
           <p>Ingeniero en Informática titulado de Duoc UC. Transformo datos en decisiones estratégicas con Python, SQL y Power BI avanzado.</p>
           <div className="btn-group">
@@ -77,12 +77,24 @@ function App() {
         </div>
       </section>
 
-      {/* EXPERIENCIA */}
+{/* EXPERIENCIA */}
       <div className="bg-alt" id="experiencia">
         <div className="inner">
           <div className="section-tag">02 · Experiencia</div>
           <div className="section-title">Trayectoria <span>profesional</span></div>
           <div className="divider"></div>
+          
+          <div className="exp-card" style={{ marginBottom: '2rem' }}>
+            <h3>Soporte Informático</h3>
+            <div className="exp-meta">Estudio Contable Yohana Silva Naranjo · Enero 2026 – Presente</div>
+            <ul>
+              <li>Revisión, configuración y mantenimiento de computadores e impresoras para los clientes del estudio.</li>
+              <li>Resolución de problemas técnicos con software y plataformas institucionales (SII, Dirección del Trabajo).</li>
+              <li>Soporte técnico orientado a la generación de reportes de ventas y funcionamiento de operadores electrónicos.</li>
+              <li>Gestión y habilitación de accesos para usuarios en diversas plataformas.</li>
+            </ul>
+          </div>
+
           <div className="exp-card">
             <h3>Practicante de Desarrollo de Software · Desarrollador de Integraciones</h3>
             <div className="exp-meta">San Miguel, Chile · Agosto 2025 – Noviembre 2025</div>
