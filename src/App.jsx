@@ -181,6 +181,17 @@ function App() {
               </div>
             </div>
 
+            <div className="skill-card">
+              <FaDesktop style={{...iconStyle, color:'#4A90E2'}} />
+              <h3>Soporte TI & Helpdesk</h3>
+              <div className="skill-tags">
+                <span className="tag">Hardware & Software</span>
+                <span className="tag">Resolución de incidentes</span>
+                <span className="tag">Redes e Impresoras</span>
+                <span className="tag">Plataformas SII / DT</span>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -378,6 +389,20 @@ function App() {
                 <span className="tag green"><SiAngular style={{verticalAlign:'middle',marginRight:4}}/>Angular</span>
               </div>
               <a href="https://wa.me/56999254350?text=Hola%20Freddy,%20me%20interesa%20cotizar%20una%20Aplicaci%C3%B3n%20Web" target="_blank" rel="noreferrer" style={{display:'flex',alignItems:'center',gap:'.4rem',marginTop:'1rem',background:'#25D366',color:'#fff',padding:'.5rem 1rem',borderRadius:'8px',fontSize:'.85rem',fontWeight:600,width:'fit-content'}}>
+                <FaWhatsapp style={{fontSize:'1.1rem'}}/> Cotiza aquí
+              </a>
+            </div>
+
+            <div className="skill-card">
+              <span style={{...iconStyle}}>🛠️</span>
+              <h3>Soporte Técnico Informático</h3>
+              <p style={{color:'var(--muted)',fontSize:'.88rem',marginBottom:'1rem'}}>Asistencia técnica para empresas y particulares. Mantenimiento preventivo y correctivo de computadores, configuración de periféricos, y resolución de problemas con software e instituciones (SII, Dirección del Trabajo, operadores electrónicos).</p>
+              <div className="skill-tags">
+                <span className="tag">Helpdesk</span>
+                <span className="tag">Mantenimiento PC</span>
+                <span className="tag">Asesoría</span>
+              </div>
+              <a href="https://wa.me/56999254350?text=Hola%20Freddy,%20necesito%20ayuda%20con%20Soporte%20T%C3%A9cnico%20Inform%C3%A1tico" target="_blank" rel="noreferrer" style={{display:'flex',alignItems:'center',gap:'.4rem',marginTop:'1rem',background:'#25D366',color:'#fff',padding:'.5rem 1rem',borderRadius:'8px',fontSize:'.85rem',fontWeight:600,width:'fit-content'}}>
                 <FaWhatsapp style={{fontSize:'1.1rem'}}/> Cotiza aquí
               </a>
             </div>
