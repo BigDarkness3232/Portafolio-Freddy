@@ -106,8 +106,21 @@ function App() {
               <li>Diseñé flujos de pruebas para APIs, asegurando la estabilidad ante fallos y cambios externos.</li>
             </ul>
           </div>
+
+          <div className="exp-card">
+            <h3>Operador de Tienda y Cajero</h3>
+            <div className="exp-meta">Lider (Walmart Chile) · Santiago, Chile · 4 meses</div>
+            <ul>
+              <li>Atención directa al cliente, manejo de transacciones y cuadratura de caja.</li>
+              <li>Operación eficiente de sistemas de punto de venta (POS).</li>
+              <li>Reposición de stock, control de inventario básico y mantenimiento del orden en la sala de ventas.</li>
+            </ul>
+          </div>
+          
         </div>
       </div>
+
+      
 
       {/* HABILIDADES */}
       <div className="bg-alt" id="habilidades">
