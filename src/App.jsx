@@ -2,6 +2,7 @@ import { DiPython, DiDjango, DiPhp, DiJavascript1, DiPostgresql } from 'react-ic
 import { SiPowerbi, SiAngular, SiTypescript, SiWoocommerce, SiGmail, SiMicrosoftexcel, SiNextdotjs, SiPrisma } from 'react-icons/si'
 import { FaWhatsapp, FaLinkedin, FaDatabase, FaGithub, FaReact } from 'react-icons/fa'
 import { useRef, useState } from 'react'
+import { FaWhatsapp, FaLinkedin, FaDatabase, FaGithub, FaReact, FaDesktop } from 'react-icons/fa'
 import emailjs from '@emailjs/browser'
 
 const iconStyle = { fontSize: '2.2rem', marginBottom: '.75rem', display: 'block' }
